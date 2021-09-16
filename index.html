@@ -10,28 +10,126 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+    }
+
+    a {
+      background-color: transparent;
+    }
+
+    b,
+    strong {
+      font-weight: bolder;
+    }
+
+    img {
+      border-style: none;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    button:-moz-focusring,
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
+      outline: 1px dotted ButtonText;
+    }
+
+    .background {
+      background: #E0E8FF;
+      background-repeat: no-repeat;
+      background-image: url('/images/pattern-background-mobile.svg');
+    }
+
+    .container {
+      flex-grow: 1;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .card {
+      max-width: 330px;
+    }
+
+    @media only screen and (min-width: 376px) {
+      .background {
+        background-repeat: repeat-x;
+        background-image: url('/images/pattern-background-desktop.svg');
+      }
+
+      .card {
+        max-width: 480px;
+      }
+    }
+
+
+    .footer {
+      justify-self: end;
+    }
+    .attribution {margin: 0 auto;}
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
   </style>
 </head>
-<body>
+<body class="background">
+  <section class="container">
 
-  Order Summary
+    <div class="card">
+      Order Summary
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+      You can now listen to millions of songs, audiobooks, and podcasts on any
+      device anywhere you like!
 
-  Annual Plan
-  $59.99/year
+      Annual Plan
+      $59.99/year
 
-  Change
+      Change
 
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      Proceed to Payment
+      Cancel Order
+    </div>
+  </section>
+
+  <section class="footer">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/wendyhamel" target="_blank">Wendy Hamel</a>.
+    </div>
+  </section>
 </body>
 </html>
