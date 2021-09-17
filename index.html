@@ -9,6 +9,20 @@
   <title>Frontend Mentor | Order summary card</title>
 
   <style>
+    :root {
+      --brand-100: #F8F9FE;
+      --brand-200: #E0E8FF;
+      --brand-300: #D6E1FF;
+      --brand-400: #766CF1;
+      --brand-500: #382AE1;
+      --text-dark: #1E2C53;
+      --text-light: #8C9099;
+      --transparent: rgba(255 255 255 0.1);
+
+      --space: 16px;
+      --radius: 16px;
+    }
+
     body {
       margin: 0;
     }
@@ -29,6 +43,11 @@
 
     img {
       border-style: none;
+    }
+
+    button {
+      border-radius: var(--radius);
+      padding: var(--space);
     }
 
     button,
@@ -65,7 +84,7 @@
     }
 
     .background {
-      background: #E0E8FF;
+      background: var(--brand-200);
       background-repeat: no-repeat;
       background-image: url('/images/pattern-background-mobile.svg');
     }
@@ -79,13 +98,13 @@
 
     .card-container {
       margin: 0 auto;
-      padding: 16px;
+      padding: var(--space);
       max-width: 330px;
     }
 
     .card {
       background: white;
-      border-radius: 16px;
+      border-radius: var(--radius);
       overflow: hidden;
     }
 
@@ -93,23 +112,32 @@
       width: auto;
     }
     .card_content {
-      padding: 16px;
+      padding: var(--space);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space);
+    }
+    .text-dark {
+      color: var(--text-dark);
     }
 
-    @media only screen and (min-width: 376px) {
-      .background {
-        background-repeat: repeat-x;
-        background-image: url('/images/pattern-background-desktop.svg');
-      }
+    .text-light {
+      color: var(--text-light);
+    }
 
-      .card-container {
-        max-width: 450px;
-      }
+    .plan {
+      padding: var(--space);
+      display: flex;
+      align-items: center;
+      gap: var(--space);
+      background: var(--brand-100);
+      border-radius: var(--radius);
+    }
 
-      .card_image img {
-        object-fit: cover;
-      }
-
+    .plan_content {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
     }
 
     .footer {
@@ -130,6 +158,21 @@
       color: hsl(228, 45%, 44%);
     }
 
+    @media only screen and (min-width: 376px) {
+      .background {
+        background-repeat: repeat-x;
+        background-image: url('/images/pattern-background-desktop.svg');
+      }
+
+      .card-container {
+        max-width: 450px;
+      }
+
+      .card_image img {
+        object-fit: cover;
+      }
+
+    }
   </style>
 </head>
 <body class="background">
@@ -141,26 +184,26 @@
           <img src="images/illustration-hero.svg" alt="illustration of person dancing with phone in hand and headphones on">
         </div>
         <div class="card_content">
-          <h2>
+          <h1 class="text-dark">
             Order Summary
-          </h2>
-          <p>
+          </h1>
+          <p class="text-light">
             You can now listen to millions of songs, audiobooks, and podcasts on any
             device anywhere you like!
           </p>
-          <div>
-            <div>
-
+          <div class="plan">
+            <div class="plan_icon">
+              <img src="images/icon-music.svg" alt="music icon">
             </div>
-            <div>
-              <span>
+            <div class="plan_content">
+              <span class="text-dark">
                 Annual Plan
               </span>
-              <span>
+              <span class="text-light">
                 $59.99/year
               </span>
             </div>
-            <div>
+            <div class="plan_change">
               <a href="">
                 Change
               </a>
