@@ -8,14 +8,9 @@
   
   <title>Frontend Mentor | Order summary card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     body {
       margin: 0;
-      display: flex;
-      flex: 1 1 auto;
-      flex-direction: column;
-      height: 100%;
     }
 
     h1 {
@@ -76,13 +71,29 @@
     }
 
     .container {
-      flex-grow: 1;
-      justify-content: center;
-      align-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+
+    .card-container {
+      margin: 0 auto;
+      padding: 16px;
+      max-width: 330px;
     }
 
     .card {
-      max-width: 330px;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .card_image img {
+      width: auto;
+    }
+    .card_content {
+      padding: 16px;
     }
 
     @media only screen and (min-width: 376px) {
@@ -91,37 +102,78 @@
         background-image: url('/images/pattern-background-desktop.svg');
       }
 
-      .card {
-        max-width: 480px;
+      .card-container {
+        max-width: 450px;
       }
-    }
 
+      .card_image img {
+        object-fit: cover;
+      }
+
+    }
 
     .footer {
-      justify-self: end;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      width: 100%;
+      align-items: center;
     }
-    .attribution {margin: 0 auto;}
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      margin: 0 auto;
+      padding: 16px;
+    }
+    .attribution {
+      font-size: 11px; text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
 
   </style>
 </head>
 <body class="background">
   <section class="container">
 
-    <div class="card">
-      Order Summary
+    <div class="card-container">
+      <div class="card">
+        <div class="card_image">
+          <img src="images/illustration-hero.svg" alt="illustration of person dancing with phone in hand and headphones on">
+        </div>
+        <div class="card_content">
+          <h2>
+            Order Summary
+          </h2>
+          <p>
+            You can now listen to millions of songs, audiobooks, and podcasts on any
+            device anywhere you like!
+          </p>
+          <div>
+            <div>
 
-      You can now listen to millions of songs, audiobooks, and podcasts on any
-      device anywhere you like!
-
-      Annual Plan
-      $59.99/year
-
-      Change
-
-      Proceed to Payment
-      Cancel Order
+            </div>
+            <div>
+              <span>
+                Annual Plan
+              </span>
+              <span>
+                $59.99/year
+              </span>
+            </div>
+            <div>
+              <a href="">
+                Change
+              </a>
+            </div>
+          </div>
+          <button>
+            Proceed to Payment
+          </button>
+          <button>
+            Cancel Order
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 
