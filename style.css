@@ -7,6 +7,7 @@
     --dark-gray: #1E2C53;
     --light-gray: #8C9099;
     --link: #3E52A3;
+    --link-hover: #C874E4;
     --transparent: rgba(255 255 255 0.1);
 
     --space: 16px;
@@ -67,6 +68,10 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText;
+}
+
+button, a {
+    transition: all 300ms ease-in-out;
 }
 
 .button {
@@ -182,6 +187,11 @@ button:-moz-focusring,
 .plan_change a {
     color: var(--brand-400);
 }
+.plan_change a:hover,
+.plan_change a:focus {
+    color: var(--link-hover);
+}
+
 .card_actions {
     display: flex;
     flex-grow: 1;
@@ -205,6 +215,10 @@ button:-moz-focusring,
 }
 .attribution a {
     color: var(--link);
+}
+.attribution a:hover,
+.attribution a:focus {
+    color: var(--link-hover);
 }
 
 @media only screen and (min-width: 376px) {
