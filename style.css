@@ -105,6 +105,9 @@ button:-moz-focusring,
 .text-dark {
     color: var(--dark-gray);
 }
+.text-light {
+    color: var(--light-gray);
+}
 .text-center {
     text-align: center;
 }
@@ -162,10 +165,6 @@ button:-moz-focusring,
     line-height: 1.5;
 }
 
-.text-light {
-    color: var(--light-gray);
-}
-
 .plan {
     padding: var(--space);
     display: flex;
@@ -182,6 +181,12 @@ button:-moz-focusring,
 }
 .plan_change a {
     color: var(--brand-400);
+}
+.card_actions {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: var(--space);
 }
 
 .footer {
@@ -216,4 +221,10 @@ button:-moz-focusring,
         object-fit: cover;
     }
 
+    .card_content {
+        padding: 40px;
+    }
+    .plan {
+        margin: 24px 0;
+    }
 }
