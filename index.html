@@ -5,175 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Order summary card</title>
 
-  <style>
-    :root {
-      --brand-100: #F8F9FE;
-      --brand-200: #E0E8FF;
-      --brand-300: #D6E1FF;
-      --brand-400: #766CF1;
-      --brand-500: #382AE1;
-      --text-dark: #1E2C53;
-      --text-light: #8C9099;
-      --transparent: rgba(255 255 255 0.1);
+  <link rel="stylesheet" href="style.css">
 
-      --space: 16px;
-      --radius: 16px;
-    }
-
-    body {
-      margin: 0;
-    }
-
-    h1, p {
-      margin: 0;
-    }
-
-    a {
-      background-color: transparent;
-    }
-
-    b,
-    strong {
-      font-weight: bolder;
-    }
-
-    img {
-      border-style: none;
-    }
-
-    button {
-      border-radius: var(--radius);
-      padding: var(--space);
-    }
-
-    button,
-    input,
-    optgroup,
-    select,
-    textarea {
-      font-family: inherit;
-      font-size: 100%;
-      line-height: 1.15;
-      margin: 0;
-    }
-
-    button,
-    [type="button"],
-    [type="reset"],
-    [type="submit"] {
-      -webkit-appearance: button;
-    }
-
-    button::-moz-focus-inner,
-    [type="button"]::-moz-focus-inner,
-    [type="reset"]::-moz-focus-inner,
-    [type="submit"]::-moz-focus-inner {
-      border-style: none;
-      padding: 0;
-    }
-
-    button:-moz-focusring,
-    [type="button"]:-moz-focusring,
-    [type="reset"]:-moz-focusring,
-    [type="submit"]:-moz-focusring {
-      outline: 1px dotted ButtonText;
-    }
-
-    .background {
-      background: var(--brand-200);
-      background-repeat: no-repeat;
-      background-image: url('/images/pattern-background-mobile.svg');
-    }
-
-    .container {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-    }
-
-    .card-container {
-      margin: 0 auto;
-      padding: var(--space);
-      max-width: 330px;
-    }
-
-    .card {
-      background: white;
-      border-radius: var(--radius);
-      overflow: hidden;
-    }
-
-    .card_image img {
-      width: auto;
-    }
-    .card_content {
-      padding: var(--space);
-      display: flex;
-      flex-direction: column;
-      gap: var(--space);
-    }
-    .text-dark {
-      color: var(--text-dark);
-    }
-
-    .text-light {
-      color: var(--text-light);
-    }
-
-    .plan {
-      padding: var(--space);
-      display: flex;
-      align-items: center;
-      gap: var(--space);
-      background: var(--brand-100);
-      border-radius: var(--radius);
-    }
-
-    .plan_content {
-      display: flex;
-      flex-grow: 1;
-      flex-direction: column;
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 0;
-      display: flex;
-      width: 100%;
-      align-items: center;
-    }
-    .attribution {
-      margin: 0 auto;
-      padding: 16px;
-    }
-    .attribution {
-      font-size: 11px; text-align: center;
-    }
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-
-    @media only screen and (min-width: 376px) {
-      .background {
-        background-repeat: repeat-x;
-        background-image: url('/images/pattern-background-desktop.svg');
-      }
-
-      .card-container {
-        max-width: 450px;
-      }
-
-      .card_image img {
-        object-fit: cover;
-      }
-
-    }
-  </style>
 </head>
+
 <body class="background">
   <section class="container">
 
@@ -183,35 +25,35 @@
           <img src="images/illustration-hero.svg" alt="illustration of person dancing with phone in hand and headphones on">
         </div>
         <div class="card_content">
-          <h1 class="text-dark">
+          <h1 class="text-dark font-bold text-center">
             Order Summary
           </h1>
-          <p class="text-light">
+          <p class="text-medium text-light text-center">
             You can now listen to millions of songs, audiobooks, and podcasts on any
             device anywhere you like!
           </p>
-          <div class="plan">
+          <div class="plan text-small">
             <div class="plan_icon">
               <img src="images/icon-music.svg" alt="music icon">
             </div>
             <div class="plan_content">
-              <span class="text-dark">
+              <span class="text-dark font-semibold">
                 Annual Plan
               </span>
               <span class="text-light">
                 $59.99/year
               </span>
             </div>
-            <div class="plan_change">
+            <div class="plan_change font-semibold">
               <a href="">
                 Change
               </a>
             </div>
           </div>
-          <button>
+          <button class="button button-primary font-semibold">
             Proceed to Payment
           </button>
-          <button>
+          <button class="button button-transparent font-semibold">
             Cancel Order
           </button>
         </div>
