@@ -1,11 +1,9 @@
 :root {
-    --brand-100: #F8F9FE;
-    --brand-200: #E0E8FF;
-    --brand-300: #D6E1FF;
-    --brand-400: #5B47CE;
-    --brand-500: #382AE1;
-    --dark-gray: #1E2C53;
-    --light-gray: #8C9099;
+    --brand-100: hsl(225, 100%, 98%);
+    --brand-200: hsl(225, 100%, 94%);
+    --brand-500: hsl(245, 75%, 52%);
+    --dark-gray: hsl(223, 47%, 23%);
+    --light-gray: hsl(224, 23%, 55%);
     --link: #3E52A3;
     --link-hover: #C874E4;
     --transparent: rgba(255 255 255 0.1);
@@ -29,7 +27,7 @@ a {
 
 b,
 strong {
-    font-weight: bolder;
+    font-weight: 900;
 }
 
 img {
@@ -87,7 +85,7 @@ button, a {
 }
 
 .button-primary {
-    border: 1px solid var(--brand-400);
+    border: 1px solid var(--brand-500);
     color: var(--brand-100);
     background: var(--brand-500);
     box-shadow: 0 22px 25px -2px rgba(118, 108, 241, 0.32), 0 8px 10px -5px rgba(118, 108, 241, 0.08);
@@ -126,7 +124,7 @@ button, a {
     font-weight: 600;
 }
 .font-bold {
-    font-weight: 700;
+    font-weight: 900;
 }
 .leading-wide {
     line-height: 1.625;
@@ -185,7 +183,7 @@ button, a {
     flex-direction: column;
 }
 .plan_change a {
-    color: var(--brand-400);
+    color: var(--brand-500);
 }
 .plan_change a:hover,
 .plan_change a:focus {
