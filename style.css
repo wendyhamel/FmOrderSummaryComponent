@@ -4,8 +4,8 @@
     --brand-500: hsl(245, 75%, 52%);
     --dark-gray: hsl(223, 47%, 23%);
     --light-gray: hsl(224, 23%, 55%);
+    --hover: hsl(245, 83%, 68%);
     --link: #3E52A3;
-    --link-hover: #C874E4;
     --transparent: rgba(255 255 255 0.1);
 
     --space: 16px;
@@ -79,10 +79,6 @@ button, a {
     transition: all 300ms ease-in-out;
     cursor: pointer;
 }
-.button:hover,
-.button:focus {
-    transform: scale(0.95);
-}
 
 .button-primary {
     border: 1px solid var(--brand-500);
@@ -93,6 +89,7 @@ button, a {
 .button-primary:hover,
 .button-primary:focus {
     box-shadow: 0 20px 25px -2px rgba(118, 108, 241, 0.32), 0 6px 10px -5px rgba(118, 108, 241, 0.08);
+    background-color: var(--hover);
 }
 
 .button-transparent {
@@ -101,8 +98,7 @@ button, a {
     color: var(--light-gray);
 }
 .button-transparent:hover {
-    border-color: var(--light-gray);
-    background: var(--brand-100);
+    color: var(--dark-gray);
 }
 
 .text-dark {
@@ -191,7 +187,8 @@ button, a {
 }
 .plan_change a:hover,
 .plan_change a:focus {
-    color: var(--link-hover);
+    color: var(--hover);
+    text-decoration: none;
 }
 
 .card_actions {
@@ -220,7 +217,7 @@ button, a {
 }
 .attribution a:hover,
 .attribution a:focus {
-    color: var(--link-hover);
+    color: var(--hover);
 }
 
 
