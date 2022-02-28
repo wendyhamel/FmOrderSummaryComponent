@@ -120,6 +120,9 @@ button, a {
 .text-medium {
     font-size: 1.1rem;
 }
+.text-lg {
+    font-size: 1.6rem;
+}
 .font-semibold {
     font-weight: 600;
 }
@@ -180,6 +183,7 @@ button, a {
 .plan_content {
     display: flex;
     flex-grow: 1;
+    row-gap: .35rem;
     flex-direction: column;
 }
 .plan_change a {
