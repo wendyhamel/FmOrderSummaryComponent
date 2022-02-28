@@ -223,7 +223,9 @@ button, a {
     color: var(--link-hover);
 }
 
-@media only screen and (min-width: 376px) {
+
+
+@media (min-width: 376px) {
     .background {
         background-repeat: repeat-x;
         background-image: url('/images/pattern-background-desktop.svg');
