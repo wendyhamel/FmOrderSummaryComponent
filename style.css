@@ -130,9 +130,9 @@ button, a {
 }
 
 .background {
-    background: var(--brand-200);
-    background-repeat: no-repeat;
     background-image: url('/images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-color: var(--brand-200);
 }
 
 .container {
